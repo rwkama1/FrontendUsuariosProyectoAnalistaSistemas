@@ -1,0 +1,120 @@
+﻿
+<div class="container">
+
+   
+        <div class='col-sm-3'>
+            <nav-vendedor></nav-vendedor>
+        </div>
+        <div class='col-sm-9 body-content'>
+          
+                <form [formGroup]="vercomprapenForm" ngNativeValidate>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"> Compra del Cliente con cedula: {{compra.ClienteC}} </h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label class=" control-label col-md-12" for="idcompra">ID de Compra</label>
+                                <div class="col-md-4">
+                                    <input class="form-control" type="text" formControlName="idcompra" value="{{compra.IdC}}" id="idcompra" readonly><!--formControlName="IdProducto"-->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label col-md-12" for="ingfecha">Fecha  de la compra</label>
+                                <div class="col-md-4">
+                                    <input class="form-control" type="text" formControlName="ingfecha" id="ingfecha" value="{{compra.FechaC}}" readonly>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label col-md-12" for="ingmetodo">Metodo de Pago</label>
+                                <div class="col-md-4">
+                                    <input class="form-control" type="text" formControlName="ingmetodo" id="ingmetodo" value="{{compra.MetodoPagoC}}" readonly>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label col-md-12" for="ingcedula">Cliente </label>
+                                <div class="col-md-4">
+                                    <input class="form-control" type="text" formControlName="ingcedula" id="ingcedula" value="{{compra.ClienteC}}" readonly>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label col-md-12" for="ingimp">Impuestos</label>
+                                <div class="col-md-4">
+                                    <input class="form-control" type="text" formControlName="ingimp" id="ingimp" value="${{compra.ImpuestosC}}" readonly>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label col-md-12" for="ingsubtotal">Subtotal</label>
+                                <div class="col-md-4">
+                                    <input class="form-control" type="text" formControlName="ingsubtotal" id="ingsubtotal" value="${{compra.SubtotalC}}" readonly>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label col-md-12" for="ingtotal">Total</label>
+                                <div class="col-md-4">
+                                    <input class="form-control" type="text" formControlName="ingtotal" id="ingtotal" value="${{compra.TotalC}}" readonly>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label col-md-12" for="ingforma">Forma de Entrega</label>
+                                <div class="col-md-4">
+                                    <input class="form-control" type="text" formControlName="ingforma" id="ingforma" value="{{compra.FormaEntregaC}}" readonly>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" control-label col-md-12" for="ingestado">Estado de la Compra</label>
+                                <div class="col-md-4">
+                                    <input class="form-control" type="text" formControlName="ingestado" id="ingestado" value="{{compra.EstadoC}}" readonly>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <table class='table' *ngIf="compra">
+                                    <thead>
+                                        <tr>
+
+                                            <th>ID del Producto</th>
+                                            <th>Cantidad </th>
+                                            <th>Importe </th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let lcompra of compra.LineaCompra;">
+
+                                            <td>{{ lcompra.ProductoLC }}</td>
+                                            <td>{{ lcompra.CantidadLC }}</td>
+                                            <td>${{ lcompra.ImporteLC }}</td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+
+                            </div>
+                        </div>
+
+                        <div class="panel-footer">
+                            <div class="form-group">
+                                <button type="submit" (click)="aceptarCompra()" class="btn btn-primary">Aceptar Compra</button>
+                                <button type="submit" (click)="rechazarCompra()" class="btn btn-primary">Rechazar Compra</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+

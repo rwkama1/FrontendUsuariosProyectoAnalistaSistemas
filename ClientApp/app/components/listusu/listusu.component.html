@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<input type="submit" class="btn btn-primary" (click)="logout()" value="Salir">
+
+
+<h1>Employee Data</h1>
+
+
+
+<p>This component demonstrates fetching Employee data from the server.</p>
+<table class='table' *ngIf="empList">
+    <thead>
+        <tr>
+
+            <th>Cedula</th>
+            <th>Nombre </th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empList;">
+
+            <td>{{ emp.CedulaUsu }}</td>
+            <td>{{ emp.NombreUsu }}</td>
+
+        </tr>
+
+    </tbody>
+
+</table>

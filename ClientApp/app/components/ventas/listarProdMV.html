@@ -1,0 +1,41 @@
+﻿
+<div class="container">
+  
+        <div class='col-sm-3'>
+            <nav-stocker></nav-stocker>
+        </div>
+        <div class='col-sm-9 body-content'>
+
+            <div class="panel panel-primary">
+                <!--id="content"-->
+                <div class="panel-heading">
+                    <h3 class="panel-title">Productos mas Vendidos</h3>
+                </div>
+                <div class="panel-body">
+                    <table class='table table-striped' *ngIf="listLineaV">
+                        <thead>
+                            <tr>
+                                <th> IdProducto</th>
+                                <th> Cantidad</th>
+                              
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let l of listLineaV;">
+
+                                <td>{{  l.ProductoLV }}</td>
+                                <td>{{  l.Cantidad }}</td>
+                              
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+          
+        </div>
+
+    </div>
+

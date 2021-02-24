@@ -1,0 +1,71 @@
+
+<div class="container">
+
+ 
+        <div class='col-sm-3'>
+            <nav-tecnico></nav-tecnico>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <form ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <h3 class="panel-title"> Ordenes de Taller</h3>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input class="form-control" type="search" id="buscar" size="30" placeholder="Buscar Orden de Taller..." width="50" on-keypress="buscarOrdenTaller()" />
+                            </div>
+                        </div>
+                        <table class='table table-striped' *ngIf="ordenList">
+                            <!--public IdOT: number | undefined ;
+                            public ProductoOT: number | undefined ;
+                            public FechaOT: Date | undefined ;
+                            public ClienteOT: number | undefined ;
+                            public DeclaracionCOT: string | undefined;
+                            public EstadoOT: string | undefined;
+                            public PrecioOT: number | undefined;
+                            public ComentarioOT: string | undefined;
+                            public TecnicoOT: number | undefined;-->
+
+                            <thead>
+                                <tr>
+                                    <th> ID de Orden de Taller</th>
+                                    <th> ID del Producto</th>
+                                    <th> Fecha de la Orden</th>
+                                    <th> Cedula del Cliente</th>
+                                    <th> Estado</th>     
+                                    <th> Cedula del Tecnico  </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let ord of ordenList;">
+                                    <td>{{ ord.IdOT }}</td>
+                                    <td>{{ ord.ProductoOT }}</td>
+                                    <td>{{ ord.FechaOT }}</td>
+                                    <td>{{ ord.ClienteOT }}</td>
+                                    <td>{{ ord.EstadoOT }}</td>
+                                    <td>{{ ord.TecnicoOT }}</td>
+                                    <td>
+                                        <a [routerLink]="" (click)="seleccionarOrdenTaller(ord.IdOT)">
+                                            Ver Orden de Taller
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+

@@ -1,0 +1,40 @@
+﻿
+<div class="container">
+        <div class='col-sm-3'>
+            <nav-menu></nav-menu>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <div class="panel panel-primary" >
+                <div class="panel-heading">
+                    <h4 >Listado de Usuarios</h4>
+                </div>
+                <div class="panel-body">
+                    <table class='table' *ngIf="empList">
+                        <thead>
+                            <tr>
+                                <th> Cedula </th>
+                                <th> Nombre</th>
+                                <th> Sueldo</th>
+                                <th> Fecha de Ingreso</th>
+                             
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let prod of empList;">
+
+                                <td>{{ prod.CedulaUsu }}</td>
+                                <td>{{ prod.NombreUsu }}</td>
+                                <td>${{ prod.Sueldo }}</td>
+                                <td>{{ prod.FechaIngreso }}</td>
+                              
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+   

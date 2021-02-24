@@ -1,0 +1,93 @@
+﻿
+
+<div class="container">
+
+ 
+        <div class='col-sm-3'>
+            <nav-stocker></nav-stocker>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <form [formGroup]="verot" #fo="ngForm" ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Agregar Orden de Envio</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Cedula del Cadete </label>
+
+                            <div class="col-md-4">
+                                <select class="form-control" name="cedulacadete" id="cedulacadete" *ngIf="cadetes" required>
+
+                                    <option *ngFor="let c of cadetes;">
+                                        {{c.CedulaUsu}}
+                                    </option>
+
+                                </select>
+                            </div>
+                          
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">ID de Venta</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="idventa" type="text" id="idventa"
+                                       readonly required>
+                                <span class="validity"></span>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Cedula del Cliente</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="clienteweb" type="text" id="cedulacliente"
+                                       readonly required>
+                                <span class="validity"></span>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Direccion</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" type="text" id="destino"
+                                       required>
+                                <span class="validity"></span>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12">Localidad</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" type="text" id="localidad"
+                                       required>
+                                <span class="validity"></span>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-group">
+                       
+                            <button type="submit" class="btn btn-primary" (click)="addoe()">Agregar Orden de Envio</button>
+                            <button type="submit" class="btn btn-primary" (click)="volver()">Volver</button>
+                        </div>
+                       
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

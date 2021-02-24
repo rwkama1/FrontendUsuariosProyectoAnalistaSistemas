@@ -1,0 +1,58 @@
+
+<div class="container">
+
+ 
+        <div class='col-sm-3'>
+            <nav-vendedor></nav-vendedor>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <form ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <h3 class="panel-title"> Compras Pendientes</h3>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <table class='table table-striped' *ngIf="compraList">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th> Fecha</th>
+                                    <th> MetodoPago</th>
+                                    <th> Cliente</th>
+                                    <th> Total</th>
+                                    <th> FormaEntrega</th>
+                                    <th> Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let com of compraList;">
+                                    <td>{{ com.IdC }}</td>
+                                    <td>{{ com.FechaC }}</td>
+                                    <td>{{ com.MetodoPagoC }}</td>
+                                    <td>{{ com.ClienteC }}</td>
+                                    <td>${{ com.TotalC }}</td>
+                                    <td>{{ com.FormaEntregaC }}</td>
+                                    <td>{{ com.EstadoC }}</td>
+                                    <td>
+                                        <a [routerLink]="" (click)="seleccionarCompra(com.IdC)">
+                                            Ver Compra
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+

@@ -1,0 +1,58 @@
+
+<div class="container">
+
+
+        <div class='col-sm-3'>
+            <nav-cajero></nav-cajero>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <form ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <h3 class="panel-title"> Ventas Personales</h3>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <table class='table table-striped' *ngIf="ventaList">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th> Fecha</th>
+                                    <th> MetodoPago</th>
+                                    <th> Total</th>
+                                    <th> FormaEntrega</th>
+                                    <th> Estado</th>
+                                    <th> Cliente</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let ven of ventaList;">
+                                    <td>{{ ven.IdV }}</td>
+                                    <td>{{ ven.FechaV }}</td>
+                                    <td>{{ ven.MetodoPagoV }}</td>
+                                    <td>${{ ven.TotalV }}</td>
+                                    <td>{{ ven.FormaEntregaV }}</td>
+                                    <td>{{ ven.EstadoV}}</td>
+                                    <td>{{ ven.ClienteV}}</td>
+                                    <td>
+                                        <a [routerLink]="" (click)="seleccionarVenta(ven.IdV)">
+                                            Ver Venta
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+

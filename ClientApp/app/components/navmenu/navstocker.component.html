@@ -1,0 +1,69 @@
+﻿<div class='main-nav'>
+    <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/ingid']">
+                        <span class='glyphicon glyphicon-shopping-cart'></span>Gestion de Productos
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/ingrut']">
+                        <span class='glyphicon glyphicon-user'></span>Gestion de Proveedores
+                    </a>
+                </li>
+
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/ingresarFC']">
+                        <span class='glyphicon glyphicon-tag'></span>Ingresar Factura  Compra
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/listarventascobradas']">
+                        <span class='glyphicon glyphicon-briefcase'></span>Cargar Orden de Envío
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/listaropendientes']">
+                        <span class='glyphicon glyphicon-share'></span>Cambiar Estado de Orden Envío
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/listarProd']">
+                        <span class='glyphicon glyphicon-list'></span>Listar Productos
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/listarProv']">
+                        <span class='glyphicon glyphicon-list'></span>Listar Proveedores
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/listProdMV']">
+                        <span class='glyphicon glyphicon-list'></span>Listar Productos mas Vendidos
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/listarFC']">
+                        <span class='glyphicon glyphicon-list'></span>Listar Factura Compras
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['Salir']" (click)="logout()">
+                        <span class='glyphicon glyphicon-log-out'></span>Salir
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

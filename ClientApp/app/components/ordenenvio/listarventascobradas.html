@@ -1,0 +1,64 @@
+
+<div class="container">
+
+   
+        <div class='col-sm-3'>
+            <nav-stocker></nav-stocker>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <form ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <h3 class="panel-title"> Ventas Cobradas </h3>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input class="form-control" type="search" id="buscar" size="30" placeholder="Buscar Fecha o ID de Venta" width="50" on-keypress="buscarVenta()" />
+                            </div>
+                        </div>
+                        <table class='table table-striped' *ngIf="ventasList">
+ 
+
+                            <thead>
+                                <tr>
+                                    <th> ID de Venta</th>
+                                    <th> Fecha de Venta</th>
+                                    <th> Cedula del Cliente</th>
+                                    <th> Forma de Entrega</th>
+                                    <th> Estado</th>
+                                    <th> Total </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let v of ventasList;">
+                                    <td>{{ v.IdV }}</td>
+                                    <td>{{ v.FechaV }}</td>
+                                    <td>{{ v.ClienteV }}</td>
+                                    <td>{{ v.FormaEntregaV }}</td>
+                                    <td>{{ v.EstadoV }}</td>
+                                    <td>${{ v.TotalV }}</td>
+
+                                    <td>
+                                        <a [routerLink]="" (click)="seleccionarVenta(v.IdV)">
+                                            Ver Venta
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+
+

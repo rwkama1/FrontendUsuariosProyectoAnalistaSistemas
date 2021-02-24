@@ -1,0 +1,107 @@
+﻿<div class="container">
+    
+        <div class='col-sm-3'>
+            <nav-stocker></nav-stocker>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <form [formGroup]="cerrarForm" #fo="ngForm"  novalidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Factura Agregada</h3>
+                    </div>
+                    <div class="panel-body">
+                      
+                        <div class="form-group">
+                            <label class=" control-label col-md-12" for="lfecha">Numero de factura</label>
+                            <div class="col-md-4">
+
+                                <input class="form-control" type="text" id="ingnumero" formControlName="ingnumero" readonly />
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Fecha de Factura</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="ingfecha" type="datetime" id="ingfecha" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Rut de Proveedor</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="ingrut" type="text" id="ingrut" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Impuestos</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="ingimp" type="text" id="ingimp" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Subtotal</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="ingsubtotal" type="text" id="ingsubtotal" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Total</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="ingtotal" type="text" id="ingtotal" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <table class='table' *ngIf="fc">
+                                <thead>
+                                    <tr>
+                                        <th>ID Producto</th>
+                                        <th>Cantidad</th>
+                                        <th>Importe </th>
+                                       
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let lfc of fc.Listalineas;">
+                                        <td>{{ lfc.ProductoLFC }}</td>
+                                        <td>{{ lfc.CantidadLFC }}</td>
+                                        <td>{{ lfc.ImporteLFC }}</td>
+                                      
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+
+                        </div>
+
+                    </div>
+                   
+                </div>
+
+            </form>
+        </div>
+    </div>
+

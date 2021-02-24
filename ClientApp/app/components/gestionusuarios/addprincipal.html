@@ -1,0 +1,58 @@
+﻿<div class="container">
+
+
+        <div class='col-sm-3'>
+            <nav-menu></nav-menu>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Usuario no existente</h3>
+                </div>
+                <div class="panel-body">
+                    <ul >
+                        <li [routerLinkActive]="['link-active']">
+                            <a [routerLink]="['/addusu']">
+                                <span class='glyphicon glyphicon-user'></span> Agregar Administrador
+                            </a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li [routerLinkActive]="['link-active']">
+                            <a [routerLink]="['/addcadete']">
+                                <span class='glyphicon glyphicon-user'></span> Agregar Cadete
+                            </a>
+                        </li>
+                    </ul>
+                    <ul >
+                        <li [routerLinkActive]="['link-active']">
+                            <a [routerLink]="['/addcajero']">
+                                <span class='glyphicon glyphicon-user'></span> Agregar Cajero
+                            </a>
+                        </li>
+                    </ul>
+                    <ul >
+                        <li [routerLinkActive]="['link-active']">
+                            <a [routerLink]="['/addstocker']">
+                                <span class='glyphicon glyphicon-user'></span> Agregar Stocker
+                            </a>
+                        </li>
+                    </ul>
+                    <ul >
+                        <li [routerLinkActive]="['link-active']">
+                            <a [routerLink]="['/addvendedor']">
+                                <span class='glyphicon glyphicon-user'></span> Agregar Vendedor
+                            </a>
+                        </li>
+                    </ul>
+                    <ul >
+                        <li [routerLinkActive]="['link-active']">
+                            <a [routerLink]="['/addtecnico']">
+                                <span class='glyphicon glyphicon-user'></span> Agregar Tecnico
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>

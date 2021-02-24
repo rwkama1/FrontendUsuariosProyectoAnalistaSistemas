@@ -1,0 +1,69 @@
+﻿<style>
+    input:invalid + span:after {
+        content: '✖';
+        padding-left: 5px;
+    }
+
+    input:valid + span:after {
+        content: '✓';
+        padding-left: 5px;
+    }
+</style>
+<div class="container">
+  
+        <div class='col-sm-3'>
+            <nav-stocker></nav-stocker>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <form (ngSubmit)="ingresarFC()" ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Ingresar Factura Compra</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="col-md-4">
+
+                                <input type="number" class="form-control" name="ingnumero" id="ingnumero" min="100" max="9999999999999" required placeholder="Numero de Factura"/>
+                                <!--<input class="form-control" type="text" id="ingnumero"  pattern="^[0-9-]+$" required
+            title="Solo números y un guion"/>
+    <span class="validity"></span>-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Fecha de Factura</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" type="date" id="ingfecha" required>
+                                <span class="validity"></span>
+                            </div>
+                           
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Rut del Proveedor</label>
+
+                            <div class="col-md-4">
+                                <select class="form-control" name="rut" id="ingrut" *ngIf="provedores" required>
+                                
+                                    <option *ngFor="let prov of provedores;">
+                                        {{prov.RutProv}}
+                                    </option>
+
+                                </select>
+                            </div>
+                        </div>
+                       
+                    </div>
+                            <div class="panel-footer">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+              
+            </form>
+        </div>
+    </div>
+

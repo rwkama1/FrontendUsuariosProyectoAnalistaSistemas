@@ -1,0 +1,55 @@
+﻿<div class='main-nav'>
+    <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink] (click)="iniciarVenta()">
+                        <span class='glyphicon glyphicon-tag'></span> Iniciar una Venta
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/listarcompraspen']">
+                        <span class='glyphicon glyphicon-shopping-cart'></span>Compras de Clientes
+                    </a>
+                </li>
+
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/chat']">
+                        <span class='glyphicon glyphicon-comment'></span>Chat
+                    </a>
+                </li>
+
+
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/regcli']">
+                        <span class='glyphicon glyphicon-user'></span> Registrar Cliente
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/listmsj']">
+                        <span class='glyphicon glyphicon-envelope'></span>Listar Mensajes
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/listarventasvcobradas']">
+                        <span class='glyphicon glyphicon-list'></span>Listar Ventas Cobradas
+                    </a>
+                </li>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['Salir']" (click)="logout()">
+                        <span class='glyphicon glyphicon-log-out'></span> Salir
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

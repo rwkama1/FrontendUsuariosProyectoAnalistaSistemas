@@ -1,0 +1,30 @@
+﻿<div class="container">
+   
+        <div class='col-sm-3'>
+            <nav-menu></nav-menu>
+        </div>
+        <div class='col-sm-9 body-content' style="width: 700px;">
+            <form name="form" (ngSubmit)="buscarusu()" #fo="ngForm" ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Ingresar Usuario</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label for="cedula">Cedula</label>
+                            <input type="number"  class="form-control" name="cedula" id="ingcedula" min="10000000" max="99999999"  required  />
+                            <span class="validity"></span>
+                        </div>
+
+
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+      

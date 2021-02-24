@@ -1,0 +1,144 @@
+﻿
+<div class="container">
+
+ 
+        <div class='col-sm-3'>
+            <nav-cajero></nav-cajero>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <form [formGroup]="verventapersonal" #fo="ngForm" novalidate>
+             
+                <div class="panel panel-primary">
+
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Informacion de la Venta</h3>
+                    </div>
+                    <div class="panel-body">
+
+
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Fecha de Venta</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="fechaventa" type="datetime" id="ingfecha" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Vencimiento de Venta</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="venfecha" type="datetime" id="venfecha" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="ingmetodo">Metodo de Pago</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="metodoventaweb" type="text" id="ingmetodo" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="ingmetodo">Forma de Entrega</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="formaentregaweb" type="text" id="ingentrega" readonly>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="ingestado">Estado de la Venta</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="estdoventaweb" type="text" id="ingestado" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Impuestos</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="impuestoventaweb" type="text" id="ingimp" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Subtotal</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="subtotalventaweb" type="text" id="ingsubtotal" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <label class=" control-label col-md-12" for="lfecha">Total</label>
+
+                            <div class="col-md-4">
+                                <input class="form-control" formControlName="totalventaweb" type="text" id="ingtotal" readonly>
+
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+
+                            <table class='table' *ngIf="v">
+                                <thead>
+                                    <tr>
+
+                                        <th>ID del Producto</th>
+                                        <th>Cantidad </th>
+                                        <th>Importe </th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let lv of v.LineaVenta;">
+
+                                        <td>{{ lv.ProductoLV }}</td>
+                                        <td>{{ lv.CantidadLV }}</td>
+                                        <td>${{ lv.ImporteLV }}</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+
+                        </div>
+
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-group">
+                          
+                            <input type="button" class="btn btn-primary" (click)="pagarefectivo()" value="Pagar en Efectivo">
+
+                        </div>
+                    </div></div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+
+

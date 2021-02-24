@@ -1,0 +1,50 @@
+﻿
+<div class="container">
+        <div class='col-sm-3'>
+            <nav-stocker></nav-stocker>
+        </div>
+        
+         <div class='col-sm-9 body-content'>
+                <div class="panel panel-primary">
+                    <!--id="content"-->
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Listado de Productos</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class='table table-striped' *ngIf="prodList">
+                            <thead>
+                                <tr>
+                                    <th> IdProducto</th>
+                                    <th> Nombre</th>
+                                    <th> Descripcion</th>
+                                    <th> Stock</th>
+                                    <th> Precio</th>
+                                    <th> Categoria</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let prod of prodList;">
+
+                                    <td>{{ prod.IdProducto }}</td>
+                                    <td>{{ prod.NomProd }}</td>
+                                    <td>{{ prod.DescProd }}</td>
+                                    <td>{{ prod.StockProd }}</td>
+                                    <td>${{ prod.PrecioProd }}</td>
+                                    <td>{{ prod.CatProd }}</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="panel-footer">
+            <button type="submit" class="btn btn-primary" (click)="printDiv()">Descargar PDF</button>
+        </div>-->
+
+     
+ 
+    </div>
+

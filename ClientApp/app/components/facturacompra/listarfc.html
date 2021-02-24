@@ -1,0 +1,49 @@
+<div class="container">
+
+
+    <div class='col-sm-3'>
+        <nav-stocker></nav-stocker>
+    </div>
+    <div class='col-sm-9 body-content'>
+        <form ngNativeValidate>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="form-group">
+                        <h3 class="panel-title"> Facturas Compras </h3>
+                    </div>
+                </div>
+                <div class="panel-body">
+                   
+                    <table class='table table-striped' *ngIf="lfacturacompra">
+
+
+                        <thead>
+                            <tr>
+                                <th> Numero</th>
+                                <th> Fecha de Factura Compra</th>
+                                <th> Proveedor</th>
+                                <th> Total </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let v of lfacturacompra;">
+                                <td>{{ v.NumeroFC }}</td>
+                                <td>{{ v.FechaFC }}</td>
+                                <td>{{ v.ProvFC }}</td>
+                                <td>${{ v.TotalFC }}</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+
+

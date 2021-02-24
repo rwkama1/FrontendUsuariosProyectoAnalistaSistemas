@@ -1,0 +1,35 @@
+﻿<div class="container">
+  
+        <div class='col-sm-3'>
+            <nav-stocker></nav-stocker>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <form  (ngSubmit)="buscarprod()" #fo="ngForm" ngNativeValidate>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Ingresar Identificacion</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class=" control-label col-md-12" for="id">Identificacion</label>
+                            <div class="col-md-4">
+                                <input class="form-control" type="search"  id="id" pattern="^[0-9-]+$" required  title="Solo números">
+                                <span class="validity"></span>
+                                
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="panel-footer">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </div>
+                      
+                    </div>
+                </div>
+</form>
+        </div>
+        </div>
+ 
+   
